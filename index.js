@@ -3,9 +3,12 @@ var socket = require('socket.io');
 
 //App setup
 var app = express();
-var listenPort = 4000;
-var server = app.listen(listenPort, () => {
-	console.log("Listening on port : " + listenPort);
+
+var server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
+var server_ip_addr = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
+
+var server = app.listen(server_port, () => {
+	console.log("Listening on port : " + server_port);
 });
 
 // Static Files
