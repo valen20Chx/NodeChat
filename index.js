@@ -27,12 +27,12 @@ io.on('connection', (socket) => {
 	socket.on('chat', (data) => {
 		io.sockets.emit('chat', data);
 
-		let today = Date.now();
+		let today = new Date();
 
 		let today_str = today.getDate() + "/" + (today.getMonth() + 1) + "/" + today.getFullYear() + " at " + today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
 
 		console.log(today_str);
-		console.log(data.username + "(" + socket.id + ") : " + data.message);
+		console.log(data.handle + " (" + socket.id + ") : " + data.message);
 		console.log('\n');
 	});
 
