@@ -16,6 +16,7 @@ function sendMessage() {
 		message: editxtMessage.value,
 		handle: editxtUsername.value
 	});
+	editxtMessage.innerText = "";
 }
 
 //Emit Events
