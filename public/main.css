@@ -1,5 +1,8 @@
 body{
-    font-family: 'Nunito';
+	font-family: 'Helvetica';
+	padding: 0;
+	margin: 0;
+	border: 0;
 }
 
 h2{
@@ -8,22 +11,31 @@ h2{
     color: #575ed8;
 }
 
-#mario-chat {
+#chat-container {
     max-width: 600px;
-    margin: 30px auto;
-    border: 1px solid #ddd;
+	border: 1px solid #ddd;
     box-shadow: 1px 3px 5px rgba(0,0,0,0.05);
     border-radius: 2px;
 }
 
 #chat-title-container {
 	background-color: #575ed8;
+	display: inline-block;
+	width: 100%;
 	height: 100%;
+	color: #fff;
+}
+
+.chat-online {
+	margin-right: 0;
+	margin-left: 100%;
+}
+
+#chat-online > div {
+	text-align: center;
 }
 
 #chat-title-text {
-	color: #fff;
-	font-family: Nunito;
 	font-weight: bold;
 	text-align: center;
 }
@@ -41,14 +53,25 @@ h2{
     color: #555;
 }
 
+#output p.err-msg{
+    padding: 14px 0px;
+    margin: 0 20px;
+    border-bottom: 1px solid #e9e9e9;
+    color: #f00;
+}
+
 #feedback p{
     color: #aaa;
     padding: 14px 0px;
     margin: 0 20px;
 }
 
-#output strong{
+#output span.username-me{
     color: #575ed8;
+}
+
+#output span.username-them{
+    color: #249b7d;
 }
 
 label{
@@ -66,7 +89,6 @@ input{
     width: 100%;
     background: #fff;
     border-bottom: 1px solid #eee;
-    font-family: Nunito;
     font-size: 16px;
 }
 

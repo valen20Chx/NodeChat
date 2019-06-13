@@ -9,15 +9,20 @@
 </head>
 <body>
 	<!--Page Content-->
-	<div id="mario-chat">
+	<div id="chat-container">
 		<div id="chat-title-container">
-			<p id="chat-title-text">Fluxus</p>
+			<div id="chat-title">
+				<p id="chat-title-text">Fluxus</p>
+			</div>
+			<div id="chat-online">
+				<p id="num-connected"></p>
+			</div>
 		</div>
 		<div id="chat-window">
 			<div id="output"></div>
 			<div id="feedback"></div>
 		</div>
-		<input type="text" id="handle" placeholder="Handle">
+		<input type="text" id="username" placeholder="Username">
 		<input type="text" id="message" placeholder="Message">
 		<button id="send">Send</button>
 	</div>
