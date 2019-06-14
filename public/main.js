@@ -11,6 +11,9 @@ var btnSend = document.getElementById('send');
 var boxOutput = document.getElementById('output');
 var boxFeedBack = document.getElementById('feedback');
 
+var notif_sound = new Audio();
+notif_sound.src = "res/audio/notif_01_cut.wav";
+
 function sendMessage() {
 	if(editxtMessage.value == "") return;
 	socket.emit('chat', {
@@ -45,6 +48,7 @@ socket.on('chat', (data) => {
 	newMsg.innerHTML = '<span class="username-them">' + data.username + ' :</span> ' + data.message;
 	boxFeedBack.innerHTML = "";
 	boxOutput.appendChild(newMsg);
+	notif_sound.play();
 });
 
 socket.on('typing', (data) => {
